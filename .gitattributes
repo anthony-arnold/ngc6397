@@ -1,3 +1,4 @@
+ngc6397.gaiadr3 filter=lfs diff=lfs merge=lfs -text
 *.gitignore filter=lfs diff=lfs merge=lfs -text
 /LICENSE filter=lfs diff=lfs merge=lfs -text
 /Pipfile filter=lfs diff=lfs merge=lfs -text
