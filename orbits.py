@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d16d66e5da81ffebbb2391c6001ee38f2e3571eec90bbc828bf7776fa9a62e13
-size 471
+"""
+Orbital parameters relating to NGC6397 from Baumgardt.
+
+https://people.smp.uq.edu.au/HolgerBaumgardt/globular/orbits.html
+"""
+
+RA = 265.175385
+""" Degrees right ascension """
+DEC = -53.674335
+""" Degrees declination """
+
+PMRA = (3.260, 0.023)
+""" Proper motion in right ascension, and error """
+PMDEC = (-17.664, 0.022)
+""" Proper motion in declination, and error """
+
+RSUN = 2.48
+""" Distance from the sun, in kpc """
+
+SIGMA = 0.2
+""" Velocity dispersion, mas/yr """

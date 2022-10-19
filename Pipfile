@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a3f421d1c41c25c0a094850800f250b53a9bb8e34dff1d00d3faf9074b4ea73b
-size 278
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jupyterlab = "*"
+jupyterlab-git = "*"
+matplotlib = "*"
+numpy = "*"
+requests = "*"
+scipy = "*"
+astropy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.7"

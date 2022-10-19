@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:888db70d1133a286f069ed1a6c497f369a55d9057ec80f4fce29ad0187ae59a5
-size 616
+"""
+Load the Gaia DR3 data from the text file into an astropy table.
+"""
+
+def _load(name):
+    import numpy as np
+    from astropy.table import Table
+    
+    data = np.loadtxt(name)
+    return Table([
+        data[:,0],
+        data[:,1],
+        data[:,2],
+        data[:,4],
+        data[:,5],
+        data[:,6],
+        data[:,7],
+        data[:,11],
+        data[:,13] - data[:,15]
+    ], names=(
+        'ra', 
+        'dec', 
+        'parallax',
+        'pmra', 
+        'pmra_error',
+        'pmdec',
+        'pmdec_error',
+        'phot_g_mean_mag', 
+        'bp_rp'
+    ))
+
+data = _load('ngc6397.gaiadr3')

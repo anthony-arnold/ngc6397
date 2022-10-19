@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04823002acd02430789c80282b7681f7f539d4069efdb53b04f3b7e1b0ec5804
-size 145
+# NGC6397
+A Jupyter Lab of NGC6397 from Gaia DR3 and N-body models.
+
+Run the [main Jupyter Notebook](ngc6397.ipynb) to view all of the results.
+
