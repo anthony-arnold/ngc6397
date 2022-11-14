@@ -8,3 +8,4 @@ LICENSE !text !filter !merge !diff
 Pipfile !text !filter !merge !diff
 *.lock !text !filter !merge !diff
 *.ipynb !text !filter !merge !diff
+ngc6397.out filter=lfs diff=lfs merge=lfs -text
