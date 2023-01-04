@@ -15,8 +15,11 @@ def _load(name):
         data[:,5],
         data[:,6],
         data[:,7],
+        np.sqrt(data[:,4]**2 + data[:,6]**2),
         data[:,11],
-        data[:,13] - data[:,15]
+        data[:,13] - data[:,15],
+        data[:,17],
+        data[:,18]
     ], names=(
         'ra', 
         'dec', 
@@ -25,8 +28,11 @@ def _load(name):
         'pmra_error',
         'pmdec',
         'pmdec_error',
+        'pm',
         'phot_g_mean_mag', 
-        'bp_rp'
+        'bp_rp',
+        'radial_velocity',
+        'radial_velocity_error'
     ))
 
 data = _load('ngc6397.gaiadr3')
