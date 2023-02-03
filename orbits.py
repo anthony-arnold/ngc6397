@@ -14,7 +14,7 @@ PMRA = (3.260, 0.023)
 PMDEC = (-17.664, 0.022)
 """ Proper motion in declination, and error """
 
-RSUN = 2.48
+RSUN = 2.482
 """ Distance from the sun, in kpc """
 
 SIGMA = 0.2
