@@ -10,9 +10,10 @@ def angular_dist(ra, dec, cra, cdec):
     """
     Get the angular distance of each data point from the given 
     celestial coordinates. All angles are in degrees and the result
-    is in arcsec.
+    is in radians.
     """
-    dra = deg2rad(cra - ra) * np.cos(deg2rad(cdec))
-    ddec = deg2rad(cdec - dec)
+    dra = deg2rad(cra - ra)**2 * np.cos(deg2rad(cdec))
+    ddec = deg2rad(cdec - dec)**2
 
-    return np.sqrt(dra**2 + ddec**2)
+    return np.sqrt(dra + ddec)
+
