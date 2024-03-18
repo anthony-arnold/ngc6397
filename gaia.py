@@ -19,6 +19,7 @@ def _load(name):
         data[:,11],
         data[:,12],
         data[:,13] - data[:,15],
+        np.sqrt(data[:,14]**2 + data[:,16]**2),
         data[:,17],
         data[:,18]
     ], names=(
@@ -33,6 +34,7 @@ def _load(name):
         'phot_g_mean_mag', 
         'eg',
         'bp_rp',
+        'bp_rp_error',
         'radial_velocity',
         'radial_velocity_error'
     ))

@@ -12,6 +12,8 @@ requests = "*"
 scipy = "*"
 astropy = "*"
 pandas = "*"
+jupyter = "*"
+ipympl = "*"
 
 [dev-packages]
 

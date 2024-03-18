@@ -19,3 +19,6 @@ RSUN = 2.482
 
 SIGMA = 0.2
 """ Velocity dispersion, mas/yr """
+
+SIGMA_RA = 3.251
+SIGMA_DEC = -17.649
