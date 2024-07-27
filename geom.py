@@ -5,6 +5,9 @@ def rad2arcsec(rad):
 
 def deg2rad(deg):
     return deg * 0.01745329
+    
+def rad2deg(r):
+    return r / 0.01745329
 
 def angular_dist(ra, dec, cra, cdec):
     """

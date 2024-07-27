@@ -9,9 +9,11 @@ RA = 265.175385
 DEC = -53.674335
 """ Degrees declination """
 
-PMRA = (3.260, 0.023)
+#PMRA = (3.260, 0.023)
+PMRA = 3.251
 """ Proper motion in right ascension, and error """
-PMDEC = (-17.664, 0.022)
+#PMDEC = (-17.664, 0.022)
+PMDEC = -17.649
 """ Proper motion in declination, and error """
 
 RSUN = 2.482
@@ -20,5 +22,8 @@ RSUN = 2.482
 SIGMA = 0.2
 """ Velocity dispersion, mas/yr """
 
-SIGMA_RA = 3.251
-SIGMA_DEC = -17.649
+#SIGMA_RA = 3.251
+#SIGMA_DEC = -17.649
+
+PARALLAX = 1 / RSUN
+""" Parallax in mas """
