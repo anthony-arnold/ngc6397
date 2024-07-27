@@ -41,4 +41,40 @@ def _load(name):
         'radial_velocity_error'
     ))
 
-data = _load('ngc6397.gaiadr3')
+def _load_field(name):
+    import numpy as np
+    from astropy.table import Table
+    data = np.loadtxt(name)
+    return Table([
+        data[:,0],
+        data[:,1],
+        data[:,2],
+        data[:,3],
+        data[:,4],
+        data[:,5],
+        data[:,6],
+        data[:,7],
+        np.sqrt(data[:,4]**2 + data[:,6]**2),
+        data[:,8],
+        data[:,9],
+        data[:,10] - data[:,12],
+        np.sqrt(data[:,11]**2 + data[:,13]**2)
+    ], names=(
+        'ra', 
+        'dec', 
+        'parallax',
+        'parallax_error',
+        'pmra', 
+        'pmra_error',
+        'pmdec',
+        'pmdec_error',
+        'pm',
+        'phot_g_mean_mag', 
+        'eg',
+        'bp_rp',
+        'bp_rp_error'
+    ))
+        
+
+# data = _load('ngc6397.gaiadr3')
+data = _load_field('fieldngc6397.gaiadr3.gz')
