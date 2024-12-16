@@ -1,0 +1,219 @@
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.0
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+%\documentclass[prb,showkeys,preprintnumbers,amsmath,amssymb, 11pt]{revtex4}
+%\documentclass[preprint,showpacs,showkeys,preprintnumbers,amsmath,amssymb]{revtex4}
+
+% Some other (several out of many) possibilities
+%\documentclass[preprint,aps]{revtex4}
+%\documentclass[aps, two column, amsmath,amssymb,floatfix]{revtex4}
+%\documentclass[showkeys,showpacs,amsmath,amssymb,onecolumn,superscriptaddress,prl]{revtex4-1}% Physical Review B
+\documentclass[aps,prl,reprint,showpacs,floatfix,superscriptaddress, onecolumn, 12pt]{revtex4-2}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{color}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{autobreak}
+
+%Macros for mathematical notations
+
+\newcommand{\V}[1]{\boldsymbol{#1}} %# vector
+\newcommand{\M}[1]{\boldsymbol{#1}} %# matrix
+\newcommand{\Set}[1]{\mathbb{#1}} %# set
+\newcommand{\D}[1]{\Delta#1} %# \D{t} for time step size
+\renewcommand{\d}[1]{\delta#1} %# \d{t} for small increment
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert } % norm
+\newcommand{\abs}[1]{\left|#1\right|} %abs
+
+\newcommand{\grad}{\M{\nabla}} %gradient
+\newcommand{\av}[1]{\left\langle #1\right\rangle } %take average
+
+\newcommand{\sM}[1]{\M{\mathcal{#1}}} %matrix in mathcal font
+\newcommand{\dprime}{\prime\prime} % double prime
+%\global\long\def\i{\iota}
+%\renewcommand{\i}{\iota} %i for imaginary unit
+%\renewcommand{\i}{\mathsf i} %i for imaginary unit
+\newcommand{\follows}{\quad\Rightarrow\quad} %=>
+\newcommand{\eqd}{\overset{d}{=}} %=^d
+\newcommand{\spe}[1]{\mathscr{#1}}  %important quantities in mathscr font
+\newcommand{\eps}{\epsilon}
+
+\newcommand{\ar}[1]{{\color{blue}#1}} % for authors' response
+
+
+\begin{document}
+\preprint{Preprint}
+
+\title{Response to Referee's report for MN-24-2128-MJ}
+\author{Anthony Arnold and Holger Baumgardt}
+% \date{}
+
+\maketitle
+
+\noindent Dear Editor,
+
+Please find enclosed a revised version of our manuscript with the revised title ``Direct N-body simulations of NGC 6397 and its tidal tails". The authors would like to thank the referee for their comments and suggestions. We have revised the manuscript carefully and applied corrections where appropriate. Changes are highlighted in the revised manuscript. In the following we itemise our responses to the referee's comments, in the order presented in the referee's report.
+
+\vspace{1em}
+
+\begin{itemize}
+    \item
+
+    \textbf{Comment:} \textit{[2,2,23] A different reason for the limit $G < 19.5$ is given at
+[2,1,32]}\\
+    \textbf{Response:} Thank you for pointing this out. We have updated the text so that the reason for the limit is consistent.
+
+    \item
+    \textbf{Comment:} \textit{[2,2,30-45] There seems to be a mix of number density and surface
+brightness here. After the authors have combined their GAIA data with
+Trager+ and HST, which do they present? Fig.2 is couched in terms of
+surface density. Please give units for the ordinate. And is the
+result meant to be number density of stars brighter than $19.5$G? I
+think the heading of Table A1 should also be explicit about these
+points. In the header row of Table A1, col.4, do you really mean "log
+\\sigma\_SD", or rather "the standard deviation of log SD"? If the
+latter, please decide whether you need 4DP here; col.2 has 2DP.}\\
+    \textbf{Response:} We agree. We have updated text to clearly state that we present a number density profile. Fig. 2 has been updated to include units in the ordinate. The heading of Table A1 has been updated to refer to Section 2.2 as the source of the data, and  Col. 4 of Table A1 now uses 2DP.
+
+    \item
+    \textbf{Comment:} \textit{[Sec.2.2 and Fig.3] Any comment about possible anisotropy? Any comment
+about the notably discrepant green point in Fig.3 just inside 100"?}\\
+    \textbf{Response:} Thank you for these questions. We do not consider anisotropy in this manuscript, however we have included a footnote which cites Vasiliev \& Baumgardt (2021) regarding anisotropy in NGC 6397. We have updated the text to address the discrepant green point in Fig. 3.
+
+    \item
+    \textbf{Comment:} \textit{[3,2,53-56] I would add the words ``the regular'' in line 54 (``..for the
+regular force calculations'') and ``regularisation'' before the ``etc.'' in
+line 56. Not knowing the code, I had wondered how you would deal with
+the binaries that are needed for the sustained evolution of a
+core-collapse cluster. Having dipped into the authors' 2022, I must
+say I do like the sound of it.}\\
+    \textbf{Response:} Thank you for pointing this out, and for your comments regarding our 2022 paper. We have updated this paragraph substantially to better describe the modifications made to the code used in this work.
+
+    \item
+    \textbf{Comment:} \textit{[4,1,49.5] I suggest adding a little detail, maybe in a footnote,
+giving the initial mass range for the model 4 or 8*. A puzzling
+aspect of the statements about the initial models here ([4,1,50]) is
+that Baumgardt \& Hilker used models with N = $100,000$, whereas here (Table 1) N is always larger than this.}\\
+    \textbf{Response:} Agree. We have added a couple of sentences explaining the varying values of $N$ used with the Baumgardt \& Hilker models.
+
+    \item
+    \textbf{Comment:} \textit{Does 0.6 M\_sun correspond to the limit $19.5$ G mentioned
+earlier?}\\
+    \textbf{Response:} Thank you for the question. The mass cutoff was chosen to estimate the $19.5$ G limit and we have updated the text to explain this.
+
+    \item
+    \textbf{Comment:} \textit{[4,2,9-11] I am puzzled how you need the N-body data at the end of the
+simulation to determine (a) the initial cluster mass and (b) the total lifetime.
+Don't you get these by (a) looking at the initial conditions of the
+simulation, and (b) running the simulation to death? Perhaps you are
+thinking of the calculations reported at [5,2,50-55], in which case a
+forward reference might be enough.}\\
+    \textbf{Response:} We agree and have added a forward reference as suggested.
+
+    \item
+    \textbf{Comment:} \textit{[4,2,43] ``very well''? But there's a notably discrepant region above
+100"}\\
+    \textbf{Response:} Thank you for pointing this out. The discrepant data point comes from the large differences in the outer three points of the Libralato et al. (2022) data. These could be extreme outliers or could be a limitation of HST. Our $N$-body profile fits between these three points.  We have updated the text to explain this.
+
+    \item
+    \textbf{Comment:} \textit{[4,2,50-51] Surely no shift should be necessary: your simulation
+allows an unambiguous calculation of the surface density. And if you
+do decide to scale the model in this way, it is really no longer
+self-consistent. Incidentally, here you are counting stars above 0.8
+M\_sun, whereas earlier ([4,2,8]) it was 0.6.}\\
+    \textbf{Response:} You have raised an important point. The mass cutoff is an estimation of the brightness cutoff of $G<19.5$. We agree that in principal a shift should not be necessary, however this requires the mass cutoff to match the brightness cutoff exactly. Moreover, it requires complete Gaia data. We found a small shift was necessary and have updated the text to explain this.
+
+    \item
+    \textbf{Comment:} \textit{[5, Table 1, header] Does ``initial'' refer to the start of the
+simulation (4 or 8 Gyr before the present) or 13 Gyr ago? I assume
+it's the former. But you have to be clear, as in [5,2,55] I think you
+mean the latter. In the middle of line 3 of the header to Table 1,
+``ratio'' should be ``radius''.}\\
+    \textbf{Response:} Thank you for pointing this out. We agree and have updated the table header to clearly state that it shows the parameters for the start and end of the simulation.
+
+    \item
+    \textbf{Comment:} \textit{[5,1,36.5] delete ``hundred''}\\
+    \textbf{Response:} Agree. We have deleted the word.
+
+    \item
+    textbf{Comment:} \textit{[5,2,49 and 54] At one point you say there is small mass loss from
+stellar evolution and at the other it's 45\%. Presumably these
+statements refer to different phases of the evolution, and if that's
+right it has to be made clear.}\\
+    textbf{Response:} Thank you for the suggestion. We have updated the text to clearly state that the extra $45\%$ of mass loss from stellar evolution comes from the early stages after cluster formation.
+
+    \item
+    \textbf{Comment:} \textit{[5,2,58] 6397}\\
+    \textbf{Response:} Thank you for finding this error. It has been fixed.
+
+    \item
+    \textbf{Comment:} \textit{[6,1,57] The initial rapid thickening referred to here leads me to
+what is probably my main worry. My guess is that it is connected with
+the remark in [5,2,45] about the mass loss during the initial
+"settling in", which you have dealt with (sensibly enough) in Fig.8 by
+removing this section of the plot. Presumably the model, which in
+Baumgardt \& Hilker was isolated I think, suddenly finds itself in a
+tidal field and rapidly sheds maybe 10\% of its mass. Therefore it
+seems to me that you should treat Figs.9 and 11 in the same way that
+you treat Fig.8, in this case by deleting the stars which were
+released in the first 500 Myr (and deleting Fig.10 entirely).
+Incidentally, the thickening in the second panel of Fig.9 looks much
+bigger than in Fig.10 (which is essentially the same plot), and I
+think you should warn the reader that the thickening in Fig.9 is
+exaggerated by the size of the plotted points. I think Fig.9 would be
+clarified by plotting points as 1-pixel points.}\\
+    \textbf{Response:} Thank you for your suggestion. We identified the stars which were ejected in the first 500 Myr and removed them from all panels in Figs. 9-11. Fig. 9 now shows the final 3.5 Gyr of cluster evolution. We have updated the text and figure captions to reflect this. We have also updated the captions of Figs. 10 \& 11 to emphasise that the stars are the same as their corresponding panels in Fig. 9.
+
+    \item
+    \textbf{Comment:} \textit{n the generation of tidal tails you always have stars emitted
+at different points and with different velocities, but you don't get
+such wide tails. My opinion about the origin of the thickness of the
+tails is given above, and I hope it will disappear in the revised
+version of the paper; then the need for this sentence will disappear.}
+    \textbf{Response:} Thank you for raising this important point. After removing the early ejected stars in Fig. 9, we found that the tidal tails are still wide after 1 Gyr. We have decided to include an updated Fig. 10 instead of removing it.
+
+
+    \item
+    \textbf{Comment:} \textit{[Fig.7] In the left panel, what do the numbers in the key mean? What
+is the dotted circle? In the right panel what do the squares mean (as
+opposed to circles)? In the caption, last sentence, is "very good
+agreement" a satisfactory statement when, in the blue circles at the
+middle of the diagram, there is a somewhat systematic error by a
+factor of order two at small masses? And that is not the only plot to
+which one could point.}\\
+    \textbf{Response:} Thank you for your questions. We have updated the caption for Fig. 7 to better describe the meaning of the key entries and data points. We have changed the qualification ``very good'' throughout the manuscript to ``good'' where appropriate.
+
+
+    \item
+    \textbf{Comment:} \textit{[8,1,43-44] I don't think you have the same number of stars in your
+simulation as in the cluster, and you did have to rescale, because
+that is what you did with your vertical shift to get the fits in Fig.5
+(which I commented on earlier).}\\
+    \textbf{Response:} Thank you for your comment, you raise an interesting point. We used the best-fitting $N$-body model (run \textbf{4} in the paper) and selected all main sequence and giant stars above 0.7 M_sun, with similar cuts in magnitude for the Gaia and HST data. The HST data are included since the Gaia data is incomplete inside 300". Below is a plot of plain number counts of stars per $\arcsec^2$ of the $N$-body and observational data; the numbers are a very clost match. The $N$-body model has 6596 inside $r<100"$ and between $300"<r<3350"$ (the region between $100" < r < 3350"$ does not match between the observations so it is excluded.) Similarly, there are 2609 stars in the HST data inside $100"$ and 3887 Gaia stars between $300"<r<3350"$ for a total of 6496 stars.
+
+    \item
+    \textbf{Comment:} \textit{}
+
+\end{itemize}
+
+\bibliography{groupbib}
+
+
+\end{document}
